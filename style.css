@@ -1,0 +1,21 @@
+@media (max-width: 768px){
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    body img{
+        width: 100%;
+        height: 100%;
+        opacity: 0.2;
+    }
+    body h1{
+        
+    }
+    foter span{
+        display: flex;
+        justify-content: center;
+
+    }
+}
