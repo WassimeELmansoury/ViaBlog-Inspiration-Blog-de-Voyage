@@ -2,7 +2,13 @@
 
     header img {
         width: 50px;
-        height: auto;
+        height: 50px;
     }
-
+    .story{
+        border-radius: 50%;
+        width: 85px;
+        height: 85px;
+        overflow: hidden;
+        border: solid #20b18b
+    }
 }
