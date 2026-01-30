@@ -3,13 +3,12 @@
     #btn-start {
         background-color: #20B18Bff;
         cursor: pointer;
-        width: 120px;
-        height:100px;
+        width: 180px;
+        height:60px;
     }
     #titre{
         font-size: 60px;
         font-family: cursive;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.7);
     }
-
-
 }
