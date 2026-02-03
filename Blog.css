@@ -1,4 +1,8 @@
 @media (max-width: 768px){
+    article.stories {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
     .story{
         border-radius: 50%;
         width: 85px;
@@ -7,3 +11,9 @@
         border: solid #20b18b
     }
 }
+  /* Desktop only: height 300px */
+  @media (min-width: 1200px) {
+    .card-img-top {
+      height: 300px !important;
+    }
+  }
