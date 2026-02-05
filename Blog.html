@@ -17,11 +17,11 @@
         </div>
 </header>
 
-<nav>
-    <h3 class="fw-semibold fs-1 mt-3 mx-2" >blogger of the week</h3>
-</nav>
 <main class="mx-2">
-    <article class="d-flex flex-nowrap gap-3 p-2 overflow-x-auto flex-md-wrap justify-content-md-start">
+
+    <article class="d-flex flex-nowrap gap-3 p-2 overflow-x-auto flex-md-wrap justify-content-md-start md:fixed md:top-0 md:right-0 md:w-[20%] md:h-[100vh] ">
+            <h3 class="fw-semibold fs-1 mt-3 mx-2" >blogger of the week</h3>
+
         <div class="d-flex flex-column align-items-center">
             <img src="./images/young-man-traveling-country-side.jpg" alt="profile" class="story rounded-circle" style="width:80px; height:80px;">
             <p class="fs-6">wassim_manso</p>
@@ -47,7 +47,7 @@
     <figure class="fst-normal">
         <h2>What Do You Want  To Read ?</h2>
     </figure>
-    <section class="d-flex gap-2 overflow-x-scroll justify-content-md-center overflow-md-hidden mt-2">
+    <section class="d-flex gap-2 overflow-x-scroll justify-content-md-center overflow-md-hidden mt-2 ">
         <div>
             <button class="btn bg-success bg-opacity-75 rounded border-0 text-white ">All</button>
         </div>
@@ -67,32 +67,36 @@
             <button class="btn bg-secondary bg-opacity-10 rounded border-0 object-fit-cover ">jungle</button>
         </div>
     </section>
-    <div class=" h-[30px] w-full  relative">
-        <button onclick="document.getElementById('modal').classList.remove('hidden')"class="bg-green-600 hover:bg-green-700 absolute right-5 text-white  font-bold py-2 px-4 rounded-lg shadow transition flex items-center">
+    <div class=" h-[30px] w-full  relative rounded-5">
+        <button onclick="document.getElementById('modal').classList.remove('hidden')"class="bg-green-600 hover:bg-green-700 absolute right-5 text-white  font-bold py-2 px-4 rounded-lg  shadow transition flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-4v4a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-4H5a2 2 0 0 1-2-2v-2a2 2 0 0 1 2-2h4z"/></g></svg>Create</button>
             <div id="modal"class="hidden fixed inset-0 bg-light bg-opacity-75 flex justify-center items-center z-50 backdrop-blur-sm">
                 <div class="bg-green-600/80 bg-gray-800 w-[80%] max-w-md p-6 rounded-lg shadow-2xl transform transition-all scale-100">
                     <h3 class="text-3xl fond-bold text-white dark:text-white mb-6 text-conter">Add Destination</h3>
                     <form id="Destination_page" class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">Titre</label>
-                            <input type="text" id="Titre" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez le Titre" required />
+                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">titre</label>
+                            <input type="text" id="titre" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez le Titre" required />
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">Destination</label>
                             <input type="text" id="des" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez la Destination" required />
                         </div>
                         <div >
-                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">Note </label>
-                            <input type="number" id="note" name="note" max="1" min="5" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez la note" required>
+                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">time </label>
+                            <input type="number" id="time" name="time" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez la time" required>
+                        </div>
+                        <div >
+                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">auteur </label>
+                            <input type="text" id="auteur" name="auteur" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez la auteur" required>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">Catégorie</label>
-                            <input type="text" id="cat" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez Catégorie" required />
+                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">views</label>
+                            <input type="text" id="views" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="Entrez views" required />
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">Image</label>
-                            <input type="text" id="img" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="URL" required />
+                            <label class="block text-sm font-medium text-white dark:text-gray-300 mb-1">image</label>
+                            <input type="text" id="image" class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-green-500 outline-none dark:bg-gray-700 dark:border-gray-600 dark:text-white" placeholder="URL" required />
                         </div>
                         <div class="flex justify-between mt-8 pt-4 border-t dark:border-gray-700">
                             <button type="button" onclick="document.getElementById('modal').classList.add('hidden')" class="px-5 py-2 bg-gray-200 hover:bg-gray-300 text-gray-800 rounded-lg transition dark:bg-gray-600 dark:text-gray-200">Annuler</button>
@@ -105,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <section class="d-flex justify-content-center mt-3">
+        <section class="d-flex justify-content-center mt-3 md:me-[20%]">
             <div class="card w-[90%] w-md-75  overflow-hidden ">
                 <img  src="./images/StockCake-Mountain_Explorer_Ascending-3520515-standard.jpg" alt="StockCake-Mountain_Explorer_Ascending-3520515-standard" class="card-img-top  lg:h-[300px] w-full object-cover">
                 <div class="card-body bg-secondary bg-opacity-10 d-flex flex-md-row justify-content-between">
@@ -120,7 +124,7 @@
                         <p><em>Maroc</em></p>
                     </div>
                     <div class="d-flex gap-1">
-                        <img src="./icons/time.png" alt="time" style="width: 15px; height: 18px;">
+                        <img src="./icons/views.png" alt="views" style="width: 15px; height: 18px;">
                         <p><em>15min</em></p>
                     </div>
                     <div class="d-flex gap-1">
@@ -131,7 +135,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-4">
+    <section class="mt-4 md:me-[20%]">
         <div class="container-fluid">
             <div class="row g-3">
                 <div class="col-12 col-md-6">
@@ -148,7 +152,7 @@
         </div>
     </section>
 </main>
-<footer class="fixed-bottom ">
+<footer class="fixed-bottom md:me-[20%] ">
     <div class="bg-light bg-opacity-75 rounded-5 me-4 ms-4">
         <div class="d-flex justify-content-around py-2">
             <a href="Blog.html"><button class="btn btn-success bg-opacity-75 rounded-circle text-white" aria-label="accueil">
