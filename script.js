@@ -5,22 +5,27 @@ let auteur = document.getElementById("auteur");
 let time = document.getElementById("time");
 let views = document.getElementById("views");
 let image = document.getElementById("image");
-
+let submit = document.getElementById("submit");
+let form = document.getElementById('Destination_page');
 let array=[];
 
-function addDATA(){
+form.addEventListener("submit",function (e){
+    e.preventDefault();
+    
     let obj = {
-        title :titre.valule,
-        Destination : Destination.valule,
-        auteur : auteur.valule,
-        time : time.valule,
-        views : views.valule,
-        image : image.valule,
+        title :titre.value,
+        Destination : Destination.value,
+        auteur : auteur.value,
+        time : time.value,
+        views : views.value,
+        image : image.value,
 
     }
     array.push(obj);
+    showData();
+    clearData();
+});
 
-}
 function showData() {
     let tableau = '';
     for (let i =0 ; i< array.length ; i++){
@@ -30,7 +35,7 @@ function showData() {
                 <img  src=${array[i].image} alt="StockCake-Mountain_Explorer_Ascending-3520515-standard" class="card-img-top  lg:h-[300px] w-full object-cover">
                 <div class="card-body bg-secondary bg-opacity-10 d-flex flex-md-row justify-content-between">
                 <div>
-                    <h6>${array[i].titre}</h6>
+                    <h6>${array[i].title}</h6>
                     <p><em>${array[i].auteur}</em></p>
                 </div>
                 <div class="d-flex gap-3 gap-md-6 ">
@@ -52,7 +57,17 @@ function showData() {
     </section>
 
         `
+
     }
-    
+    document.getElementById("content").innerHTML= tableau;
+   
+}
+function clearData(){
+    titre.value='';
+    auteur.value='';
+    Destination.value='';
+    time.value='';
+    views.value='';
+    image.value='';
 }
 
