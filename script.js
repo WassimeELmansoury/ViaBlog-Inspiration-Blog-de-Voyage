@@ -47,6 +47,10 @@ function showData() {
                     <h6>${array[i].title}</h6>
                     <p><em>${array[i].auteur}</em></p>
                 </div>
+                <button onclick="deleteCard(${i})"
+                    class="btn btn-danger btn-sm position-absolute top-0 end-0 m-2 z-3">
+                    Supprimer
+                </button>
                 <div class="d-flex gap-3 gap-md-6 ">
                     <div class="d-flex gap-1 gap-md-2">
                         <img src="./icons/location.png" alt="location" style="width: 15px; height: 18px;">
@@ -71,12 +75,11 @@ function showData() {
     document.getElementById("content").innerHTML= tableau;
    
 }
-function clearData(){
-    titre.value='';
-    auteur.value='';
-    Destination.value='';
-    time.value='';
-    views.value='';
-    image.value='';
+function deleteCard(index){
+    array.splice(index, 1);
+    localStorage.setItem("destinations", JSON.stringify(array));
+    showData();
+
+
 }
 
