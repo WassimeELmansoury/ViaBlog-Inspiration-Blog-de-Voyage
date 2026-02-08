@@ -7,8 +7,11 @@ let views = document.getElementById("views");
 let image = document.getElementById("image");
 let submit = document.getElementById("submit");
 let form = document.getElementById('Destination_page');
-let array=[];
 
+
+let array = JSON.parse(localStorage.getItem("destinations")) || [];
+
+showData();
 form.addEventListener("submit",function (e){
     e.preventDefault();
     
@@ -22,8 +25,14 @@ form.addEventListener("submit",function (e){
 
     }
     array.push(obj);
+    localStorage.setItem("destinations", JSON.stringify(array));
+
     showData();
     clearData();
+    
+    
+    document.getElementById('modal').classList.add('hidden');
+    
 });
 
 function showData() {
